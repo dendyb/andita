@@ -16,7 +16,7 @@ jobs:
           host: "109.111.53.203"
           username: "dendy"
           port: 2222
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /var/www/andita
             git pull origin main
