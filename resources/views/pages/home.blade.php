@@ -13,14 +13,14 @@
             {{-- TEXT --}}
             <div class="text-center lg:text-left">
                 <h1 class="text-3xl font-extrabold leading-tight sm:text-5xl lg:text-6xl text-slate-900">
-                    Digital Solutions
+                    Solusi Bisnis Anda,
                     <span class="block text-blue-700">
-                        For Modern Business
+                        Prioritas Kami
                     </span>
                 </h1>
 
                 <p class="max-w-xl mx-auto mt-6 text-lg text-slate-600 lg:mx-0">
-                    Andita menghadirkan solusi website dan aplikasi web yang profesional,
+                    Menghadirkan ketersediaan infratruktur, solusi website serta aplikasi web yang profesional,
                     stabil, dan siap mendukung pertumbuhan bisnis Anda.
                 </p>
 
