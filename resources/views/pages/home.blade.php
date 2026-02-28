@@ -40,7 +40,7 @@
             {{-- IMAGE --}}
             <div class="overflow-hidden shadow-lg rounded-xl">
                 <img src="{{ asset('images/dcandita.png') }}"
-                     alt="Andita Digital"
+                     alt="Andita IT Integrator"
                      class="object-cover w-full h-auto">
             </div>
 
