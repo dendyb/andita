@@ -32,7 +32,7 @@
 
                     <a href="{{ route('layanan') }}"
                        class="px-8 py-3 font-semibold transition border rounded-lg border-slate-300 hover:bg-slate-50">
-                        Lihat Layanan
+                        Layanan
                     </a>
                 </div>
             </div>
