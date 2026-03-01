@@ -84,7 +84,7 @@
 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Terpercaya</span>
 </h1>
 <p class="max-w-2xl mx-auto text-base font-normal leading-relaxed text-slate-300 sm:text-lg md:text-xl">
-                                             Menyediakan Infrastruktur IT, Instalasi LAN / Fiber Optic, dan Pengembangan Aplikasi Mobile/Web untuk akselerasi pertumbuhan bisnis Anda.
+                                             Menyediakan Infrastruktur IT, Instalasi Jaringan / Fiber Optic, dan Pengembangan Aplikasi Mobile/Web untuk akselerasi pertumbuhan bisnis Anda.
                                         </p>
 <div class="flex flex-col flex-wrap justify-center w-full gap-4 mt-4 sm:flex-row">
 <button class="flex w-full sm:w-auto min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/25">
