@@ -2,8 +2,15 @@
     <div class="flex items-center justify-between h-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 
         {{-- Logo --}}
-        <a href="{{ route('home') }}" class="text-xl font-bold text-slate-900">
-            Andita
+        <a href="{{ route('home') }}" class="flex items-center space-x-3">
+            <img 
+                src="{{ asset('images/iconAndita.jpeg') }}" 
+                alt="Andita Logo"
+                class="w-8 h-8"
+            >
+            <span class="text-xl font-bold text-slate-900">
+                Andita
+            </span>
         </a>
 
         {{-- Desktop Menu --}}
