@@ -12,7 +12,7 @@
                     <span class="text-base font-bold text-slate-900 dark:text-white">Andita IT</span>
                 </a>
                 <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                    Solusi integrasi IT terpercaya — infrastruktur handal, jaringan aman, dan pengembangan software terbaik.
+                    Solusi integrasi IT terpercaya — infrastruktur handal, jaringan aman, dan pengembangan Aplikasi / Mobile App
                 </p>
             </div>
 
@@ -81,7 +81,7 @@
         {{-- Bottom Bar --}}
         <div class="pt-8 text-center border-t border-slate-200 dark:border-slate-800 sm:text-left">
             <p class="text-xs text-slate-400">
-                &copy; {{ date('Y') }} CV. Andita. Seluruh hak cipta dilindungi.
+                &copy; {{ date('Y') }} CV.Andita &copy; Hak cipta dilindungi.
             </p>
         </div>
     </div>

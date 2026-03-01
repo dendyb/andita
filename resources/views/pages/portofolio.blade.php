@@ -14,8 +14,7 @@
         <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
                 <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4">
-                    Portofolio &amp; <br class="hidden sm:block"/>
-                    Case Studies
+                    Portofolio 
                 </h1>
                 <p class="max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">
                     Telusuri rekam jejak aktivitas kami.
@@ -162,7 +161,7 @@
             <div class="flex flex-col max-w-xl gap-2 text-center sm:text-left">
                 <h3 class="text-2xl font-bold text-white">Punya proyek serupa?</h3>
                 <p class="text-sm leading-relaxed text-slate-400">
-                    Tim insinyur kami siap membantu Anda merancang dan mengimplementasikan infrastruktur yang tepat sesuai kebutuhan.
+                    Tim kami siap membantu merancang dan implementasi infrastruktur yang tepat.
                 </p>
             </div>
             <a href="{{ route('kontak') }}"
