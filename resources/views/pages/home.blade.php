@@ -27,11 +27,12 @@
                 <div class="flex flex-col justify-center gap-4 mt-8 sm:flex-row lg:justify-start">
                     <a href="{{ route('kontak') }}"
                        class="px-8 py-3 font-semibold text-white transition bg-blue-700 rounded-lg hover:bg-blue-800">
-                        Konsultasikan segera 
+                        Konsultasikan segera
                     </a>
 
+                    {{-- Added explicit text-slate-700 so colour is consistent on all devices --}}
                     <a href="{{ route('layanan') }}"
-                       class="px-8 py-3 font-semibold transition border rounded-lg border-slate-300 hover:bg-slate-50">
+                       class="px-8 py-3 font-semibold transition border rounded-lg text-slate-700 border-slate-300 hover:bg-slate-50">
                         Layanan
                     </a>
                 </div>
@@ -65,22 +66,23 @@
 
         <div class="grid gap-8 md:grid-cols-3">
 
+            {{-- Added text-slate-900 to each h3 so the heading colour doesn't rely on browser defaults --}}
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Mobile App</h3>
+                <h3 class="mb-3 text-xl font-semibold text-slate-900">Mobile App</h3>
                 <p class="text-slate-600">
                     Aplikasi mobile yang untuk meningkatkan pengalaman pelanggan Anda.
                 </p>
             </div>
 
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Jaringan LAN</h3>
+                <h3 class="mb-3 text-xl font-semibold text-slate-900">Jaringan LAN</h3>
                 <p class="text-slate-600">
                     Instalasi jaringan pada gedung bertingkat dan kantor.
                 </p>
             </div>
 
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Instalasi Fiber Optic</h3>
+                <h3 class="mb-3 text-xl font-semibold text-slate-900">Instalasi Fiber Optic</h3>
                 <p class="text-slate-600">
                     Instalasi Fiber Optic untuk kebutuhan konektivitas antar gedung atau jaringan internet cepat dan stabil.
                 </p>
