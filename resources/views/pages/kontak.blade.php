@@ -6,15 +6,15 @@
 @section('content')
 
 {{-- ===================== PAGE HEADER ===================== --}}
-<section class="relative pt-16 pb-14 overflow-hidden">
+<section class="relative pt-16 overflow-hidden pb-14">
     <div class="absolute inset-0 bg-gradient-to-br from-slate-100 to-white dark:from-[#0b1216] dark:to-background-dark -z-10"></div>
     <div class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full -z-10"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-white mb-4">
+    <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-10">
+        <h1 class="mb-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl text-slate-900 dark:text-white">
             Hubungi <span class="text-primary">Kami</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-lg text-slate-500 dark:text-slate-400 leading-relaxed">
+        <p class="max-w-2xl mx-auto text-lg leading-relaxed text-slate-500 dark:text-slate-400">
             Kami siap membantu kebutuhan integrasi IT Anda. Tim ahli kami berdedikasi untuk memberikan
             solusi terbaik bagi pertumbuhan bisnis Anda.
         </p>
@@ -23,23 +23,23 @@
 
 {{-- ===================== CONTACT INFO CARDS ===================== --}}
 <section class="py-10 bg-white dark:bg-[#0d1a20]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
             @foreach([
                 [
-                    'icon'  => 'location_on',
+                    'icon'  => '',
                     'title' => 'Kantor Pusat',
                     'lines' => ['Yogyakarta', 'Indonesia'],
                     'href'  => '#',
                 ],
                 [
-                    'icon'  => 'call',
+                    'icon'  => '',
                     'title' => 'Telepon',
                     'lines' => ['+62 21 5555 8888', 'Senin–Jumat, 09.00–17.00 WIB'],
                     'href'  => 'tel:+622155558888',
                 ],
                 [
-                    'icon'  => 'alternate_email',
+                    'icon'  => '',
                     'title' => 'Email',
                     'lines' => ['info@andita.co.id', 'support@andita.co.id'],
                     'href'  => 'mailto:info@andita.co.id',
@@ -47,13 +47,13 @@
             ] as $info)
             <a href="{{ $info['href'] }}"
                class="group flex items-start gap-4 p-6 rounded-xl bg-background-light dark:bg-[#15232b] border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
-                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-primary/10 text-primary shrink-0 group-hover:bg-primary group-hover:text-white">
                     <span class="material-symbols-outlined text-[22px]">{{ $info['icon'] }}</span>
                 </div>
                 <div>
-                    <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{{ $info['title'] }}</h3>
+                    <h3 class="mb-1 text-sm font-bold text-slate-900 dark:text-white">{{ $info['title'] }}</h3>
                     @foreach($info['lines'] as $line)
-                    <p class="text-slate-500 dark:text-slate-400 text-sm">{{ $line }}</p>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">{{ $line }}</p>
                     @endforeach
                 </div>
             </a>
@@ -64,7 +64,7 @@
 
 {{-- ===================== FORM + MAP ===================== --}}
 <section class="py-16 bg-background-light dark:bg-background-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
         <div class="grid gap-10 lg:grid-cols-2">
 
             {{-- Contact Form --}}
@@ -78,7 +78,7 @@
                     @csrf
 
                     {{-- Nama + Email --}}
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
                         <div class="flex flex-col gap-1.5">
                             <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Nama Lengkap</label>
                             <input type="text"
@@ -132,21 +132,21 @@
 
                     {{-- Submit --}}
                     <button type="submit"
-                            class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold h-12 rounded-lg transition-all shadow-lg shadow-primary/25 group text-sm mt-1">
+                            class="flex items-center justify-center w-full h-12 gap-2 mt-1 text-sm font-bold text-white transition-all rounded-lg shadow-lg bg-primary hover:bg-primary-dark shadow-primary/25 group">
                         Kirim Pesan Sekarang
                         <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">send</span>
                     </button>
 
                     {{-- Success / Error Messages --}}
                     @if (session('success'))
-                    <div class="flex items-center gap-2 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-400 text-sm">
+                    <div class="flex items-center gap-2 p-4 text-sm text-green-700 border border-green-200 rounded-lg bg-green-50 dark:bg-green-900/20 dark:border-green-800 dark:text-green-400">
                         <span class="material-symbols-outlined text-[18px]">check_circle</span>
                         {{ session('success') }}
                     </div>
                     @endif
 
                     @if ($errors->any())
-                    <div class="flex items-start gap-2 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 text-sm">
+                    <div class="flex items-start gap-2 p-4 text-sm text-red-700 border border-red-200 rounded-lg bg-red-50 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400">
                         <span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">error</span>
                         <div>
                             @foreach ($errors->all() as $error)
@@ -177,7 +177,7 @@
 
                 {{-- Business Hours --}}
                 <div class="p-6 rounded-2xl bg-white dark:bg-[#15232b] border border-slate-200 dark:border-slate-800">
-                    <h3 class="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2 text-sm">
+                    <h3 class="flex items-center gap-2 mb-4 text-sm font-bold text-slate-900 dark:text-white">
                         <span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
                         Jam Operasional
                     </h3>

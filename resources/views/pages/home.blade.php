@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Andita - Digital Solutions')
+@section('title', 'Andita - IT Integrator')
 
 @section('content')
 

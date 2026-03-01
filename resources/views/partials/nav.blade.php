@@ -3,11 +3,11 @@
 
         {{-- Logo --}}
         <a href="{{ route('home') }}" class="flex items-center space-x-3">
-            <img 
+            {{-- <img 
                 src="{{ asset('images/iconAnditaSmall.webp') }}" 
                 alt="Andita"
                 class="w-8 h-8"
-            >
+            > --}}
             <span class="text-xl font-bold text-slate-900">
                 Andita
             </span>
