@@ -39,11 +39,13 @@
 <header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 border-b border-solid whitespace-nowrap border-slate-200 dark:border-slate-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm md:px-10 lg:px-40">
 <div class="flex items-center gap-4">
 <div class="flex items-center justify-center rounded size-8 bg-primary/10 text-primary">
-<span class="text-2xl material-symbols-outlined">dns</span>
+<span class="text-2xl material-symbols-outlined"></span>
 </div>
+
 <h2 class="text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Andita</h2>
 </div>
 <div class="items-center justify-end flex-1 hidden gap-8 md:flex">
+    
 <nav class="flex items-center gap-8">
 <a class="text-sm font-medium transition-colors text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Home</a>
 <a class="text-sm font-medium transition-colors text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Layanan</a>
