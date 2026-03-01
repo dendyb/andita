@@ -20,14 +20,14 @@
                 </h1>
 
                 <p class="max-w-xl mx-auto mt-6 text-lg text-slate-600 lg:mx-0">
-                    Menghadirkan ketersediaan infratruktur, solusi website serta aplikasi web yang profesional,
-                    stabil, dan siap mendukung pertumbuhan bisnis Anda.
+                    Menyiapkan infrastruktur, perangkat keras dan implementasi LAN / Fiber Optic untuk
+                    mendukung pertumbuhan bisnis Anda.
                 </p>
 
                 <div class="flex flex-col justify-center gap-4 mt-8 sm:flex-row lg:justify-start">
                     <a href="{{ route('kontak') }}"
                        class="px-8 py-3 font-semibold text-white transition bg-blue-700 rounded-lg hover:bg-blue-800">
-                        Mulai Konsultasi
+                        Konsultasikan segera 
                     </a>
 
                     <a href="{{ route('layanan') }}"
@@ -66,23 +66,23 @@
         <div class="grid gap-8 md:grid-cols-3">
 
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Website Development</h3>
+                <h3 class="mb-3 text-xl font-semibold">Mobile App</h3>
                 <p class="text-slate-600">
-                    Website modern dan responsif untuk meningkatkan kredibilitas bisnis Anda.
+                    Aplikasi mobile yang untuk meningkatkan pengalaman pelanggan Anda.
                 </p>
             </div>
 
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Web Application</h3>
+                <h3 class="mb-3 text-xl font-semibold">Jaringan LAN</h3>
                 <p class="text-slate-600">
-                    Sistem berbasis web yang stabil dan scalable untuk operasional bisnis.
+                    Instalasi jaringan pada gedung bertingkat dan kantor.
                 </p>
             </div>
 
             <div class="p-8 transition bg-white border border-slate-200 rounded-xl hover:shadow-lg">
-                <h3 class="mb-3 text-xl font-semibold">Infrastructure & DevOps</h3>
+                <h3 class="mb-3 text-xl font-semibold">Instalasi Fiber Optic</h3>
                 <p class="text-slate-600">
-                    Infrastruktur dan deployment profesional dengan keamanan optimal.
+                    Instalasi Fiber Optic untuk kebutuhan konektivitas antar gedung atau jaringan internet cepat dan stabil.
                 </p>
             </div>
 
@@ -101,7 +101,7 @@
         </h2>
 
         <p class="mt-4 text-slate-600">
-            Hubungi tim Andita untuk solusi digital yang tepat dan terukur.
+            Hubungi tim Andita untuk solusi yang tepat & terukur.
         </p>
 
         <a href="{{ route('kontak') }}"

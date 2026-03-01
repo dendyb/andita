@@ -4,7 +4,7 @@
         {{-- Logo --}}
         <a href="{{ route('home') }}" class="flex items-center space-x-3">
             <img 
-                src="{{ asset('images/iconAndita.jpeg') }}" 
+                src="{{ asset('images/iconAnditaSmall.webp') }}" 
                 alt="Andita Logo"
                 class="w-8 h-8"
             >

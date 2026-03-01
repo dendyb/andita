@@ -1,9 +1,9 @@
 {{-- resources/views/partials/footer.blade.php --}}
 <footer class="bg-slate-100 dark:bg-[#0b1216] border-t border-slate-200 dark:border-slate-800 pt-14 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
 
         {{-- Top Grid --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="grid grid-cols-1 gap-10 mb-12 sm:grid-cols-2 lg:grid-cols-4">
 
             {{-- Brand --}}
             <div class="sm:col-span-2 lg:col-span-1">
@@ -13,27 +13,14 @@
                     </div>
                     <span class="text-base font-bold text-slate-900 dark:text-white">Andita IT</span>
                 </a>
-                <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">
+                <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">
                     Solusi integrasi IT terpercaya — infrastruktur handal, jaringan aman, dan pengembangan software terbaik.
                 </p>
-                <div class="flex gap-3">
-                    @foreach([
-                        ['icon' => 'alternate_email', 'href' => 'mailto:info@andita.co.id', 'label' => 'Email'],
-                        ['icon' => 'call',             'href' => 'tel:+622155558888',        'label' => 'Telepon'],
-                        ['icon' => 'chat',             'href' => '#',                         'label' => 'WhatsApp'],
-                    ] as $social)
-                    <a href="{{ $social['href'] }}"
-                       aria-label="{{ $social['label'] }}"
-                       class="flex items-center justify-center w-9 h-9 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all">
-                        <span class="material-symbols-outlined text-[18px]">{{ $social['icon'] }}</span>
-                    </a>
-                    @endforeach
-                </div>
             </div>
 
             {{-- Layanan --}}
             <div>
-                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Layanan</h4>
+                <h4 class="mb-4 text-sm font-bold tracking-wider uppercase text-slate-900 dark:text-white">Layanan</h4>
                 <ul class="space-y-2.5">
                     @foreach([
                         'Infrastruktur IT',
@@ -44,7 +31,7 @@
                     ] as $item)
                     <li>
                         <a href="{{ route('layanan') }}"
-                           class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                           class="text-sm transition-colors text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
                             {{ $item }}
                         </a>
                     </li>
@@ -54,7 +41,7 @@
 
             {{-- Perusahaan --}}
             <div>
-                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Perusahaan</h4>
+                <h4 class="mb-4 text-sm font-bold tracking-wider uppercase text-slate-900 dark:text-white">Perusahaan</h4>
                 <ul class="space-y-2.5">
                     @foreach([
                         ['label' => 'Beranda',    'route' => 'home'],
@@ -63,7 +50,7 @@
                     ] as $item)
                     <li>
                         <a href="{{ route($item['route']) }}"
-                           class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                           class="text-sm transition-colors text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
                             {{ $item['label'] }}
                         </a>
                     </li>
@@ -73,33 +60,30 @@
 
             {{-- Kontak --}}
             <div>
-                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">Kontak</h4>
-                <address class="not-italic space-y-3">
+                <h4 class="mb-4 text-sm font-bold tracking-wider uppercase text-slate-900 dark:text-white">Kontak</h4>
+                <address class="space-y-3 not-italic">
                     <p class="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400">
                         <span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">location_on</span>
                         Yogyakarta, Indonesia
                     </p>
                     <a href="tel:+622155558888"
-                       class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                       class="flex items-center gap-2 text-sm transition-colors text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
                         <span class="material-symbols-outlined text-primary text-[16px] shrink-0">call</span>
-                        +62 21 5555 8888
+                        +62 817-4127-621
                     </a>
                     <a href="mailto:info@andita.co.id"
-                       class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+                       class="flex items-center gap-2 text-sm transition-colors text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary">
                         <span class="material-symbols-outlined text-primary text-[16px] shrink-0">alternate_email</span>
-                        info@andita.co.id
+                        info@andita.web.id
                     </a>
                 </address>
             </div>
         </div>
 
         {{-- Bottom Bar --}}
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8 border-t border-slate-200 dark:border-slate-800">
-            <p class="text-xs text-slate-400 text-center sm:text-left">
-                &copy; {{ date('Y') }} CV. Andita. Seluruh hak cipta dilindungi.
-            </p>
+        <div class="pt-8 text-center border-t border-slate-200 dark:border-slate-800 sm:text-left">
             <p class="text-xs text-slate-400">
-                Yogyakarta, Indonesia
+                &copy; {{ date('Y') }} CV. Andita. Seluruh hak cipta dilindungi.
             </p>
         </div>
     </div>

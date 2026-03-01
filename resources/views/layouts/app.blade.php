@@ -7,6 +7,7 @@
     <title>@yield('title', 'Andita')</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="overflow-x-hidden antialiased bg-white text-slate-900">
@@ -19,5 +20,13 @@
 
     @include('partials.footer')
 
+    <script>
+        lucide.createIcons();
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+    });
+</script>
 </body>
 </html>
