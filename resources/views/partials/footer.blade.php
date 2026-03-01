@@ -8,9 +8,7 @@
             {{-- Brand --}}
             <div class="sm:col-span-2 lg:col-span-1">
                 <a href="{{ route('home') }}" class="flex items-center gap-3 mb-4">
-                    <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary">
-                        <span class="material-symbols-outlined text-[20px]">dns</span>
-                    </div>
+                    
                     <span class="text-base font-bold text-slate-900 dark:text-white">Andita IT</span>
                 </a>
                 <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400">

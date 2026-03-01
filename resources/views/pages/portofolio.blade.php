@@ -6,29 +6,27 @@
 @section('content')
 
 {{-- ===================== PAGE HEADER ===================== --}}
-<section class="relative pt-16 pb-14 overflow-hidden">
+<section class="relative pt-16 overflow-hidden pb-14">
     <div class="absolute inset-0 bg-gradient-to-br from-slate-100 to-white dark:from-[#0b1216] dark:to-background-dark -z-10"></div>
     <div class="absolute top-0 left-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full -z-10"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div class="flex items-center gap-2 text-primary font-medium text-sm uppercase tracking-wider mb-4">
-            <span class="w-8 h-0.5 bg-primary"></span>
-            Our Works
-        </div>
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
                 <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-4">
-                    Key Projects &amp;<br class="hidden sm:block"/> Case Studies
+                    Portofolio &amp; <br class="hidden sm:block"/>
+                    Case Studies
                 </h1>
-                <p class="max-w-2xl text-lg text-slate-500 dark:text-slate-400 leading-relaxed">
-                    Telusuri rekam jejak implementasi infrastruktur IT kami — dari jaringan fiber optik
-                    metropolitan hingga data center yang aman dan efisien.
+                <p class="max-w-2xl text-lg leading-relaxed text-slate-500 dark:text-slate-400">
+                    Telusuri rekam jejak aktivitas kami.
                 </p>
             </div>
             <a href="{{ route('kontak') }}"
-               class="shrink-0 flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold h-11 px-6 rounded-lg transition-all shadow-lg shadow-primary/25 text-sm w-fit">
+               class="flex items-center gap-2 px-6 text-sm font-bold text-white transition-all rounded-lg shadow-lg shrink-0 bg-primary hover:bg-primary-dark h-11 shadow-primary/25 w-fit">
                 Start a Project
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
             </a>
         </div>
     </div>
@@ -36,8 +34,8 @@
 
 {{-- ===================== FILTER TABS ===================== --}}
 <section class="bg-white dark:bg-[#0d1a20] border-b border-slate-200 dark:border-slate-800 sticky top-16 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-3">
-        <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-1" id="filter-tabs">
+    <div class="px-4 py-3 mx-auto max-w-7xl sm:px-6 lg:px-10">
+        <div class="flex gap-2 pb-1 overflow-x-auto scrollbar-hide" id="filter-tabs">
             @foreach([
                 ['label' => 'Semua Proyek', 'filter' => 'all'],
                 ['label' => 'Infrastructure', 'filter' => 'infrastructure'],
@@ -48,7 +46,7 @@
             <button onclick="filterProjects('{{ $tab['filter'] }}')"
                     data-filter="{{ $tab['filter'] }}"
                     class="filter-btn shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors
-                           {{ $loop->first ? 'bg-primary text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700' }}">
+                           {{ $loop->first ? 'active-filter' : 'inactive-filter' }}">
                 {{ $tab['label'] }}
             </button>
             @endforeach
@@ -58,8 +56,8 @@
 
 {{-- ===================== PROJECT GRID ===================== --}}
 <section class="py-16 bg-background-light dark:bg-background-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-grid">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2" id="project-grid">
 
             @php
             $projects = [
@@ -113,17 +111,17 @@
                      data-filter="{{ $project['tags'][0]['filter'] }}">
 
                 {{-- Image --}}
-                <div class="relative h-56 sm:h-64 overflow-hidden">
+                <div class="relative h-56 overflow-hidden sm:h-64">
                     <img src="{{ $project['image'] }}"
                          alt="{{ $project['title'] }}"
-                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                         class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                          loading="lazy"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
 
                     {{-- Tags --}}
-                    <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+                    <div class="absolute flex flex-wrap gap-2 top-4 left-4">
                         @foreach($project['tags'] as $tag)
-                        <span class="px-3 py-1 bg-background-dark/80 backdrop-blur-md text-primary text-xs font-bold rounded-full uppercase tracking-wide border border-primary/20">
+                        <span class="px-3 py-1 text-xs font-bold tracking-wide uppercase border rounded-full bg-background-dark/80 backdrop-blur-md text-primary border-primary/20">
                             {{ $tag['label'] }}
                         </span>
                         @endforeach
@@ -131,22 +129,22 @@
                 </div>
 
                 {{-- Content --}}
-                <div class="flex flex-col flex-1 p-6 gap-3">
-                    <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight group-hover:text-primary transition-colors">
+                <div class="flex flex-col flex-1 gap-3 p-6">
+                    <h3 class="text-lg font-bold leading-tight transition-colors text-slate-900 dark:text-white group-hover:text-primary">
                         {{ $project['title'] }}
                     </h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed flex-1">
+                    <p class="flex-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
                         {{ $project['desc'] }}
                     </p>
-                    <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 mt-auto">
-                        <span class="text-xs text-slate-400 flex items-center gap-1">
-                            <span class="material-symbols-outlined text-[14px]">calendar_month</span>
+                    <div class="flex items-center justify-between pt-4 mt-auto border-t border-slate-100 dark:border-slate-800">
+                        <span class="flex items-center gap-1 text-xs text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             {{ $project['year'] }}
                         </span>
                         <a href="{{ route('kontak') }}"
-                           class="flex items-center gap-1 text-primary text-sm font-bold hover:gap-2 transition-all">
+                           class="flex items-center gap-1 text-sm font-bold transition-all group/link text-primary">
                             Lihat Detail
-                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0 transition-transform group-hover/link:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
@@ -159,18 +157,18 @@
 
 {{-- ===================== CTA ===================== --}}
 <section class="py-16 bg-white dark:bg-[#0d1a20]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-10">
         <div class="rounded-2xl bg-gradient-to-r from-[#1c2327] to-[#161c20] border border-slate-200 dark:border-[#283339] p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-8 shadow-lg">
-            <div class="flex flex-col gap-2 max-w-xl text-center sm:text-left">
-                <h3 class="text-white text-2xl font-bold">Punya proyek serupa?</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
+            <div class="flex flex-col max-w-xl gap-2 text-center sm:text-left">
+                <h3 class="text-2xl font-bold text-white">Punya proyek serupa?</h3>
+                <p class="text-sm leading-relaxed text-slate-400">
                     Tim insinyur kami siap membantu Anda merancang dan mengimplementasikan infrastruktur yang tepat sesuai kebutuhan.
                 </p>
             </div>
             <a href="{{ route('kontak') }}"
-               class="shrink-0 flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold h-12 px-8 rounded-lg transition-all shadow-lg shadow-primary/25 whitespace-nowrap text-sm">
+               class="flex items-center h-12 gap-2 px-8 text-sm font-bold text-white transition-all rounded-lg shadow-lg shrink-0 bg-primary hover:bg-primary-dark shadow-primary/25 whitespace-nowrap">
                 Start a Project
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </div>
     </div>
@@ -179,24 +177,49 @@
 @endsection
 
 @push('scripts')
+<style>
+    .active-filter {
+        background-color: var(--color-primary, #0ea5e9);
+        color: #ffffff;
+    }
+    .inactive-filter {
+        background-color: #f1f5f9;
+        color: #475569;
+    }
+    @media (prefers-color-scheme: dark) {
+        .inactive-filter {
+            background-color: #1e293b;
+            color: #cbd5e1;
+        }
+    }
+    .dark .inactive-filter {
+        background-color: #1e293b;
+        color: #cbd5e1;
+    }
+    .inactive-filter:hover {
+        background-color: #e2e8f0;
+    }
+    .dark .inactive-filter:hover {
+        background-color: #334155;
+    }
+</style>
 <script>
 function filterProjects(filter) {
-    // Update active tab
+    // Update active tab — replace class names entirely to avoid conflicts
     document.querySelectorAll('.filter-btn').forEach(btn => {
         const isActive = btn.dataset.filter === filter;
-        btn.classList.toggle('bg-primary',     isActive);
-        btn.classList.toggle('text-white',     isActive);
-        btn.classList.toggle('bg-slate-100',   !isActive);
-        btn.classList.toggle('dark:bg-slate-800', !isActive);
-        btn.classList.toggle('text-slate-600', !isActive);
-        btn.classList.toggle('dark:text-slate-300', !isActive);
+        btn.className = btn.className
+            .replace(/\b(active-filter|inactive-filter)\b/g, '')
+            .trim();
+        btn.className += ' ' + (isActive ? 'active-filter' : 'inactive-filter');
     });
 
-    // Filter cards
+    // Show / hide cards with smooth transition
     document.querySelectorAll('.project-card').forEach(card => {
         const show = filter === 'all' || card.dataset.filter === filter;
-        card.style.opacity    = show ? '1' : '0.3';
-        card.style.transform  = show ? '' : 'scale(0.97)';
+        card.style.transition    = 'opacity 0.25s ease, transform 0.25s ease';
+        card.style.opacity       = show ? '1' : '0.25';
+        card.style.transform     = show ? 'scale(1)' : 'scale(0.97)';
         card.style.pointerEvents = show ? '' : 'none';
     });
 }
